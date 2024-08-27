@@ -1,0 +1,77 @@
+﻿@using Cad_Cliente.Integracao.Response
+@model ViaCepResponse
+@{
+    ViewData["Title"] = "Cliente";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem vindo</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">Cadastro cliente</a>.</p>
+</div>
+
+
+<form asp-controller="Cliente" asp-action="ListaCep" method="get">
+
+    <input type="text" asp-for="Cep" /> <button type="submit" class="btn btn-primary">Pesquisar ID</button>
+
+
+
+    <div class="form-group">
+        <label for="Logradouro"> Logradouro </label>
+        <input type="text" asp-for="Logradouro" class="form-control" placeholder=" Diginte o nome ">
+
+    </div>
+    <div class="form-group">
+        <label for="complemento"> complemento </label>
+        <input type="text" asp-for="complemento" class="form-control" placeholder=" Diginte o email ">
+
+    </div>
+    <div class="form-group">
+        <label for="bairro"> bairro </label>
+        <input type="text" asp-for="bairro" class="form-control" placeholder=" bairro ">
+
+    </div>
+    <div class="form-group">
+        <label for="localidade"> localidade </label>
+        <input type="text" asp-for="localidade" class="form-control" placeholder=" localidade ">
+
+    </div>
+
+    <div class="form-group">
+        <label for="uf"> uf </label>
+        <input type="text" asp-for="uf" class="form-control" placeholder=" uf ">
+
+    </div>
+
+    <div class="form-group">
+        <label for="ibge"> ibge </label>
+        <input type="text" asp-for="ibge" class="form-control" placeholder=" ibge ">
+
+    </div>
+
+    <div class="form-group">
+        <label for="gia"> gia </label>
+        <input type="text" asp-for="gia" class="form-control" placeholder=" gia ">
+
+    </div>
+
+    <div class="form-group">
+        <label for="ddd"> ddd </label>
+        <input type="text" asp-for="ddd" class="form-control" placeholder=" ddd ">
+
+    </div>
+
+    <div class="form-group">
+        <label for="siafi"> siafi </label>
+        <input type="text" asp-for="siafi" class="form-control" placeholder=" siafi ">
+
+    </div>
+
+   <!-- <button type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="Criar" method="post">salvar</button>
+    <button type="submit" class="btn btn-primary" asp-controller="Cliente" asp-action="Alterar" method="post">editar</button>
+    <button type="submit" class="btn btn-danger" asp-for="id" asp-controller="Cliente" asp-action="Excluir">Excluir</button>
+    <a class="btn btn-primary" asp-controller="Cliente" asp-action="Index" role="button">voltar</a>
+     <button type="submit" class="btn btn-primary">Editar</button>-->
+    <!--<button type="submit" class="btn btn-primary">Excluir</button>-->
+
+</form>

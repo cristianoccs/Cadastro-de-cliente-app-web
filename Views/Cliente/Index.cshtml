@@ -1,0 +1,59 @@
+﻿@model List<CadastroModel>
+ 
+@{
+    ViewData["Title"] = "Cadastrar o Cliente";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem vindo a Comtec</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">Cadastro cliente</a>.</p>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">email</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Idade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+
+            foreach (CadastroModel cadastro in Model)
+            {
+                <tr>
+                    <th scope="row">@cadastro.Id</th>
+                    <td>@cadastro.name</td>
+                    <td>@cadastro.mail</td>
+                    <td>@cadastro.cpf</td>
+                    <td>@cadastro.idade</td>
+                    <td>
+                        <dv class="btn-group" role="group">
+                            <a class="btn btn-primary" asp-route-id="@cadastro.Id" asp-controller="Cliente" asp-action="Editar">Editar</a>
+                            <a class="btn btn-danger" asp-route-id="@cadastro.Id" asp-controller="Cliente" asp-action="Excluir">Excluir</a>
+                        </dv>
+
+                    </td>
+
+                </tr>
+
+
+            }
+
+
+
+        }
+
+
+        
+    </tbody>
+</table>
+
+
+
+
